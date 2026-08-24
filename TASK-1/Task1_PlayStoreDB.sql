@@ -13,7 +13,14 @@ INSERT INTO Categories(CategoryID,CategoryName,MinimumAge) VALUES (301,"Educatio
 SELECT * FROM Categories;
 
 CREATE TABLE Apps(AppID INT PRIMARY KEY,AppName VARCHAR(60),DeveloperID INT,PublisherID INT,CategoryID INT,Rating DECIMAL(2,1),Downloads INT,Price DECIMAL(6,2));
-INSERT INTO Apps(AppID,AppName,DeveloperID,PublisherID,CategoryID,Rating,Downloads,Price) VALUES (1001,"Google Classroom",101,201,301,4.6,500000000,0),(1002,"Google Keep",101,201,302,4.5,1000000000,0),(1003,"Instagram",102,201,304,4.4,500000000,0),(1004,"Spotify",103,201,303,4.5,100000000,0),(1005,"canva",104,201,302,4.7,50000000,0),(1006,"BYJUS",105,201,301,4.3,100000000,290),(1007,"Candy Crush",102,204,305,4.6,100000000,0),(1008,"Temple Run",104,203,305,4.2,500000000,0);
+INSERT INTO Apps(AppID,AppName,DeveloperID,PublisherID,CategoryID,Rating,Downloads,Price) VALUES (1001,"Google Classroom",101,201,301,4.6,500000000,0),
+(1002,"Google Keep",101,201,302,4.5,1000000000,0),
+(1003,"Instagram",102,201,304,4.4,500000000,0),
+(1004,"Spotify",103,201,303,4.5,100000000,0),
+(1005,"canva",104,201,302,4.7,50000000,90),
+(1006,"BYJUS",105,201,301,4.3,100000000,199),
+(1007,"Candy Crush",102,204,305,4.6,100000000,0),
+(1008,"Temple Run",104,203,305,4.2,500000000,0);
 SELECT * FROM Apps;
 
 INSERT INTO Developers() VALUES (106,"OpenAI","USA",2015);
@@ -45,7 +52,7 @@ WHERE AppID=1006;
 DELETE FROM Categories
 WHERE CategoryID=303;
 
-TRUNCATE TABLE Developers;
-TRUNCATE TABLE Publishers;
-TRUNCATE TABLE Categories;
-TRUNCATE TABLE Apps;
+SELECT * FROM Developers;
+SELECT * FROM Apps;
+SELECT * FROM Categories;
+SELECT * FROM Publishers;
