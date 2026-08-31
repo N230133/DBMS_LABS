@@ -1,4 +1,5 @@
 USE playstoredb;
+
 SELECT UPPER(DeveloperName) FROM Developers;
 SELECT LOWER(DeveloperName) FROM Developers;
 SELECT LENGTH(AppName) FROM Apps;
@@ -16,10 +17,6 @@ SELECT CONVERT(Downloads,CHAR(10)) FROM Apps;
 SELECT UPPER(AppName),Rating FROM Apps;
 SELECT SUBSTRING(CategoryName,1,3) FROM Categories;
 SELECT ABS(200 - Price) FROM Apps;
-
 SELECT DeveloperName,LENGTH(DeveloperName) FROM Developers;
-SELECT CURRENT_DATE(),CURRENT_TIMESTAMP();
+SELECT CURRENT_DATE(),CURRENT_TIME();
 SELECT CAST(Rating AS CHAR) FROM Apps;
-
-
-
